@@ -1,0 +1,31 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    contact
+{% endblock title %}
+
+{% block content %}
+<section class="w-full h-[100vh] bg-[#0E0F17] text-center px-5 pt-20 py-5">
+    <div>
+        <h1 class="text-6xl font-bold text-white">Contact <span class='text-[#2aabe4]'>Us</span></h1>
+    </div>
+    <div class="max-w-[1240px] mx-auto grid md:grid-cols-2 py-10">
+        <img src="{% static 'contact.jpg' %}" class="w-[500px] mx-auto my-4 hover:scale-105 hover:ease-in-out hover:duration-200 hover:overflow-hidden" alt="about">
+        <div> 
+            <form method="post" id="contact" action="{% url 'contactSaved' %}" role="form">
+                {% csrf_token %}
+                <div class="text-[#0E0F17] grid my-10 gap-5 px-5">
+                    <input type="text" class="text-[#0E0F17] rounded-md hover:scale-105 focus:scale-105" name="name" id="name" placeholder="John Doe">
+                    <input type="email" class="text-[#0E0F17] rounded-md hover:scale-105 focus:scale-105" name="email" id="email" placeholder="John.Doe@abc.com">
+                    <input type="text" class="text-[#0E0F17] rounded-md hover:scale-105 focus:scale-105" name="city" id="city" placeholder="kolkata">
+                    <textarea rows="2" name="message" class="text-[#0E0F17] rounded-md hover:scale-105 focus:scale-105" cols="10" placeholder="Your message here....."></textarea>
+                <div>
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,68 @@
+{% load tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    {% tailwind_css %}
+    <title>
+        {% block title %}
+          {{title}} 
+        {% endblock title %} page
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    
+</head>
+
+<body>
+
+    <!--navbar starts-->
+    <nav class="w-full h-[70px] bg-black bg-opacity-40 backdrop-blur-md drop-shadow-lg z-[1000] fixed">
+        <div class="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
+            <div class="text-white">
+                <h1 class="text-3xl font-bold"><a href="/">saviour org</a></h1>
+            </div>
+            <div class="md:flex flex-row">
+                <ul class="flex text-white items-center">
+                    <li class="p-4 hover:scale-110 cursor-pointer font-bold hover:text-cyan-400"><a href="/">Home</a></li>
+                    <li class="p-4 hover:scale-110 cursor-pointer font-bold hover:text-cyan-400"><a href="{% url 'explore' %}">Explore</a></li>
+                    <li class="p-4 hover:scale-110 cursor-pointer font-bold hover:text-cyan-400"><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar ends-->
+
+
+    {% block content %}
+      
+    {% endblock content %}
+
+    <!--footer starts-->
+    <footer>
+        <div class="w-full bg-[#0e0f17af] text-white text-center px-5 py-5">
+            <p>Created By Pritam Sarbajna | © 2022 All rights reserved by <span class="text-[#2aabe4] font-bold">Saviour org</span></p>
+            <p>Important note : <span class="font-serif font-bold">I have used the photos from pexels.com and all are copyright free</span></p>
+        </div>
+    </footer>
+    <!--footer ends-->
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
+
+
+</body>
+
+</html>

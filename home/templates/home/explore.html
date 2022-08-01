@@ -1,0 +1,84 @@
+{% extends "home/base.html" %}
+
+{% load static %}
+
+{% block title %}
+    explore
+{% endblock title %}
+
+{% block content %}
+
+    <!--camps section starts-->
+    <section class="w-full bg-[#0E0F17] text-white text-center px-5 pt-20">
+        <div>
+            <h1 class="text-6xl font-bold">Our <span class='text-[#2aabe4]'>Camps</span></h1>
+        </div>
+        <div class='grid sm:grid-cols-2 sm:px-2 lg:grid-cols-4 gap-10 text-center py-10'>
+
+            <div class='bg-[#263238] rounded-2xl border-cyan-50 border-2 flex flex-col py-12 px-8 hover:bg-[#546E7A] hover:scale-105'>
+                <div class='inline-flex p-2'>
+                    <img src="{% static 'blood-donation.jpg' %}" alt="">
+                </div>
+                <h3 class="text-2xl font-bold text-[#2aabe4]">Blood donation camp</h3>
+                <p class='py-5 px-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit corporis nihil porro rerum vel eum harum esse repellendus sint reiciendis.</p>
+            </div>
+
+            <div class='bg-[#263238] rounded-2xl border-cyan-50 border-2 flex flex-col py-12 px-8 hover:bg-[#546E7A] hover:scale-105'>
+                <div class='inline-flex p-2'>
+                    <img src="{% static 'tsunami.jpg' %}" alt="">
+                </div>
+                <h3 class="text-2xl font-bold text-[#2aabe4]">Tsunami food donation camp</h3>
+                <p class='py-5 px-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit corporis nihil porro rerum vel eum harum esse repellendus sint reiciendis.</p>
+            </div>
+
+            <div class='bg-[#263238] rounded-2xl border-cyan-50 border-2 flex flex-col py-12 px-8 hover:bg-[#546E7A] hover:scale-105'>
+                <div class='inline-flex p-2'>
+                    <img src="{% static 'helping-poor.jpg' %}" alt="">
+                </div>
+                <h3 class="text-2xl font-bold text-[#2aabe4]">Camp for helping poors</h3>
+                <p class='py-5 px-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit corporis nihil porro rerum vel eum harum esse repellendus sint reiciendis.</p>
+            </div>
+
+            <div class='bg-[#263238] rounded-2xl border-cyan-50 border-2 flex flex-col py-12 px-8 hover:bg-[#546E7A] hover:scale-105'>
+                <div class='inline-flex p-2'>
+                    <img src="{% static 'food-donation.jpg' %}" alt="">
+                </div>
+                <h3 class="text-2xl font-bold text-[#2aabe4]">Food donation camp</h3>
+                <p class='py-5 px-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit corporis nihil porro rerum vel eum harum esse repellendus sint reiciendis.</p>
+            </div>
+        </div>
+    </section>
+    <!--camps section ends-->
+
+    <!--recent activity section starts-->
+    <section class="w-full bg-[#0E0F17] text-white text-center px-5 py-5">
+        <div>
+            <h1 class="text-6xl font-bold">Recent <span class='text-[#2aabe4]'>posts</span></h1>
+        </div>
+        <div class="max-w-[1240px] mx-auto grid md:grid-cols-2 py-10 pl-10 sm:pl-20">
+            <ol class="relative border-l border-gray-200">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white "></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">July 2022</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">How you can join with us</h3>
+                    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nostrum, laudantium molestiae explicabo accusantium modi.</p>
+                    <a href="{% url 'contact' %}" class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg class="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white "></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">June 2022</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Donate your old cloths, books</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime dolores ratione iusto modi iure veritatis?</p>
+                </li>
+                <li class="ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white "></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">May 2022</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">How saviour org got Best NGO award</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quam minus expedita officia dolor rem.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!--recent activity section ends-->
+
+{% endblock content %}
